@@ -12,6 +12,7 @@ public class PruebaEva03 {
 	@Test
 	public void queSePuedaCrearUnNadador() {
 		Nadador nuevo = new Nadador(1, "Camila", "Espalda");
+
 		assertEquals("Espalda", nuevo.getEstiloPreferido());
 		assertEquals((Integer)1, nuevo.getNumeroDeSocio());
 	}
@@ -45,7 +46,7 @@ public class PruebaEva03 {
 	
 	@Test
 	public void  queSePuedanIncorporarDistintosDeportistas() {
-		// El nï¿½mero de socio no se puede repetir
+		// El número de socio no se puede repetir
 		Club actual = new Club("CARP");
 		
 		actual.agregarDeportista(new Corredor(1000, "Camila", 42000));
@@ -65,7 +66,7 @@ public class PruebaEva03 {
 	
 	@Test (expected = NoEstaPreparado.class)
 	public void  queUnCorredorNoSePuedaInscribirEnUnaCarreraDeNatacion () throws NoEstaPreparado{	
-		// En las carreras de nataciï¿½n sï¿½lo pueden inscribirse los que sean INadador
+		// En las carreras de natación sólo pueden inscribirse los que sean INadador
 		Deportista celeste = new Corredor(1000, "Celeste", 10000);
 		Club actual = new Club("Sitas");
 		actual.agregarDeportista(celeste);
@@ -76,7 +77,7 @@ public class PruebaEva03 {
 	
 	@Test (expected = NoEstaPreparado.class)
 	public void  queUnCorredorNoSePuedaInscribirEnUnTriatlon () throws NoEstaPreparado{		
-		// En los triatlones sï¿½lo pueden inscribirse los que sean INadador & ICiclista
+		// En los triatlones sólo pueden inscribirse los que sean INadador & ICiclista
 		Deportista celeste = new Corredor(1000, "Celeste", 10000);
 		Club actual = new Club("Sitas");
 		
